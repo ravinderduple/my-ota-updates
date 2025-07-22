@@ -9,6 +9,7 @@ import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
+import java.io.File
 
 class MainApplication : Application(), ReactApplication {
 
@@ -21,6 +22,11 @@ class MainApplication : Application(), ReactApplication {
             }
 
         override fun getJSMainModuleName(): String = "index"
+
+          override fun getJSBundleFile(): String? {
+      val file = File(applicationContext.filesDir, "update/index.android.bundle")
+      return if (file.exists()) file.absolutePath else super.getJSBundleFile()
+    }
 
         override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
 

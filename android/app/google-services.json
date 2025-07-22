@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744970295388",
+    "project_id": "otademo-1ed63",
+    "storage_bucket": "otademo-1ed63.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744970295388:android:ffd88b0a35b8d301376e99",
+        "android_client_info": {
+          "package_name": "com.otademo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZ0Q41_kdsaKeWq6xyQU5EWke1fSG2e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
