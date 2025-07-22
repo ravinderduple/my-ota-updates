@@ -3,7 +3,7 @@ import { Alert } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import RNFS from 'react-native-fs';
 
-const CURRENT_VERSION = '1.0.2'; // 👈 Set your current app version here
+const CURRENT_VERSION = '1.0.3'; // 👈 Set your current app version here
 
 const OTAUpdateChecker = () => {
   useEffect(() => {
@@ -29,6 +29,8 @@ const OTAUpdateChecker = () => {
             // Check success by inspecting status code
             if (downloadResult.statusCode === 200) {
               const fileExists = await RNFS.exists(localPath);
+
+              console.log("file exisits",localPath)
               if (fileExists) {
                 Alert.alert('Update downloaded', 'Please restart the app to apply the new version.');
               } else {

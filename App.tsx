@@ -16,7 +16,7 @@ function App() {
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <OTAUpdateChecker />
-      {/* <NewAppScreen templateFileName="App.tsx" /> */}
+      <NewAppScreen templateFileName="App.tsx" />
     </View>
   );
 }
